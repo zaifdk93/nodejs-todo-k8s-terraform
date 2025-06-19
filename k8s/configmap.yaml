@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: todo-config
+  namespace: zaif-namespace
+data:
+  APP_NAME: "TodoAppK8s"

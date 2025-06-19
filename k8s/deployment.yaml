@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  namespace: zaif-namespace
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: todo
+  template:
+    metadata:
+      labels:
+        app: todo
+    spec:
+      containers:
+        - name: todo-container
+          image: zaifdk93/nodejs-todo:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: APP_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: todo-config
+                  key: APP_NAME
+            - name: PORT
+              valueFrom:
+                secretKeyRef:
+                  name: todo-secret
+                  key: PORT

@@ -1,0 +1,13 @@
+# Node.js Todo App with Kubernetes + Terraform + GitHub Actions
+
+This is a DevOps portfolio project that demonstrates:
+
+- 🐳 Dockerized Node.js App (Todo API)
+- ☸️ Kubernetes Deployments with ConfigMap, Secret, Namespace
+- ⚙️ Infrastructure as Code using Terraform
+- 🚀 CI/CD Pipeline using GitHub Actions
+
+---
+
+## 📦 Project Structure
+
